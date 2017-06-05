@@ -1,0 +1,140 @@
+/* 日历nav */
+.calendar-header{
+    /*height: 16rem !important;*/
+    line-height: normal !important;
+    padding: 0 !important;
+    margin:0 !important;
+    width: 100%;
+}
+ /* navigation */
+.calendar-header nav{
+    padding: .5rem 0;
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+.calendar-header nav *,
+.calendar-header .calendar-title{
+    text-align: center;
+    font-style: normal;
+    line-height: 1;
+}
+.calendar-header .calendar-title{
+    border-bottom: 1px solid #eee
+}
+.calendar-header nav p{
+    margin-top:0.6rem;
+    font-size: .6rem;
+}
+.calendar-header nav div:not(:last-child){
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+ .calendar-header nav .on{
+     color:rgb(255, 117, 8);
+ }
+.calendar-header .calendar-title div,
+.calendar-content .calendar-body header{
+     height: 1.4rem;
+     line-height: 1.4rem;
+}
+.calendar-content .calendar-body header{
+     height: 1.6rem;
+     line-height: 1.6rem;
+     font-size: .7rem
+}
+.app-page-header>*, body {
+    background: #f8f8f8;
+}
+/* calendar body */
+.calendar-content .calendar-body *{
+    text-align: center;
+}
+.calendar-content .calendar-body section{
+    width: 100%;
+}
+.calendar-content .calendar-body section div{
+    float: left;
+    width: 14.285714285714286%;
+    margin-bottom:.08rem;
+}
+.calendar-content .calendar-body section div span{
+    display: block;
+    width: 100%;
+    height:1.8rem;
+    line-height:1.8rem;
+    text-align: center;
+    font-size: .5rem;
+}
+.calendar-content .calendar-body section i{
+    display: block;
+    width: 0.01rem;
+    height: 0.01rem;
+    clear: both;
+}
+/*.calendar-content .calendar-body .disabled{
+    color:#646b7b;
+}*/
+.calendar-content .calendar-body .start,
+.calendar-content .calendar-body .end{
+    background-color: rgb(255,117,8);
+    line-height: .8rem;
+    border-radius: .2rem 0rem 0rem .2rem
+}
+.calendar-content .calendar-body .end{
+    border-radius: 0rem .2rem .2rem 0rem
+}
+.calendar-content .calendar-body .start:before,
+.calendar-content .calendar-body .end:before{
+    content: "入住";
+    display: block;
+    line-height: 0.8rem;
+    padding-top:.2rem;
+}
+.calendar-content .calendar-body .end:before{
+    content: "离店";
+}
+.calendar-header > div {
+    position: fixed;
+    top: 4rem;
+    width: 100%;
+    z-index: 5;
+    max-width: 640px !important;
+    margin: 0 auto !important;
+    left: 0;
+    right: 0;
+}
+
+.font_11 {
+    font-size: 0.5rem !important;
+}
+.text-tips {
+    color: #9e9e9e;
+}
+.font_13 {
+    font-size: .5rem !important;
+}
+.m-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    width: 100%;
+}
+
+.m-flex > *:not(label) {
+    display: block;
+    width: 100%;
+}
+
+.m-flex > *:not(label), .m-flex > .col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}

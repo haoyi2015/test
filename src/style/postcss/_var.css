@@ -1,0 +1,23 @@
+/* Colors */
+
+$color_header_bg:#eaeaea;
+$color_contain_bg:#fff;
+$color_title:#333;
+$color_subtitle:#767676;
+$color_label:#a4a4a4;
+$color_tag:#9e9e9e;
+$color_line:#E1E1E1;
+$color_btn_bg: #F92E4A;
+$color_tag_border: #616161;
+$color_general: #000;
+$color_cover_bg: rgba(225, 55, 70, .9);
+
+/* Heights */
+
+$h_header: 2.2rem;
+
+/* Widths */
+
+$w_page_padding:0.4rem;
+
+/* font-size */

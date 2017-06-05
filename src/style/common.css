@@ -1,0 +1,354 @@
+@import './postcss/_animation.css';
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4, h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    /*border: none;*/
+    color: #333;
+    box-sizing: border-box;
+    font-family: "Microsoft Yahei", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    &:focus {
+        outline: none;
+    }
+}
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background-color: #F5F5F5;
+}
+
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+textarea {
+    -webkit-appearance: none;
+}
+
+html, body {
+    @util size(100%, 100%);
+    background-color: #F5F5F5;
+}
+
+
+/* animation */
+
+.spinner {
+    @util center;
+    div {
+        margin: 0 5px;
+        @util circle(18px, #f2911d);
+        display: inline-block;
+        animation: bouncedelay 1.4s infinite ease-in-out;
+        animation-fill-mode: both;
+    }
+    .bounce1 {
+        animation-delay: -0.32s;
+    }
+    .bounce2 {
+        animation-delay: -0.16s;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.circle {
+    animation: circle 0.5s infinite linear;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* utils */
+
+.center-block {
+    @util center-block;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+$aligns: left, right, center;
+@each $text in ($aligns) {
+    .text-$(text) {
+        text-align: $(text);
+    }
+}
+
+
+/* Grid */
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    &.row-warp {
+        flex-wrap: wrap !important;
+    }
+    >.col {
+        flex: 1;
+        box-flex: 1;
+        &.col-2 {
+            width: 50%;
+        }
+        &.col-3 {
+            width: 33.33333%;
+        }
+    }
+}
+
+.imgCover {
+    width: 100%;
+    max-width: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* ellipsis style */
+
+.app-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.app-ellipsis-2 {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+/* Stars */
+
+.star, .star > * {
+    font-family: 'mikeFonts' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info-stars:before {
+    color: rgb(255, 210, 0);
+}
+
+.icon-info-stars.star_0:after, .icon-info-stars.star_5:before {
+    content: "\e908\e908\e908\e908\e908 ";
+}
+
+.icon-info-stars.star_1:before, .icon-info-stars.star_4:after {
+    content: "\e908";
+}
+
+.icon-info-stars.star_1:after, .icon-info-stars.star_4:before {
+    content: "\e908\e908\e908\e908";
+}
+
+.icon-info-stars.star_2:before, .icon-info-stars.star_3:after {
+    content: "\e908\e908";
+}
+
+.icon-info-stars.star_2:after, .icon-info-stars.star_3:before {
+    content: "\e908\e908\e908";
+}
+
+/*vip*/
+i.icon-vip.yk:before{
+    color: #c1bfba
+}
+i.icon-vip.jk:before{
+    color: #f4bd00
+}
+i.icon-vip.bjk:before{
+    color: #fe5b5b
+}
+i.icon-vip.hk:before{
+    color: #414141
+}
+/* app row css */
+
+.app-row:before, .app-row:after {
+    display: table;
+    content: ' ';
+}
+
+.app-row:after {
+    clear: both;
+}
+
+.app-row > [class*='app-col-'] {
+    float: left;
+}
+
+.app-col-xs-1, .app-col-sm-1, .app-col-xs-2, .app-col-sm-2, .app-col-xs-3, .app-col-sm-3, .app-col-xs-4, .app-col-sm-4, .app-col-xs-5, .app-col-sm-5, .app-col-xs-6, .app-col-sm-6, .app-col-xs-7, .app-col-sm-7, .app-col-xs-8, .app-col-sm-8, .app-col-xs-9, .app-col-sm-9, .app-col-xs-10, .app-col-sm-10, .app-col-xs-11, .app-col-sm-11, .app-col-xs-12, .app-col-sm-12 {
+    position: relative;
+    min-height: 1px;
+}
+
+.app-col-xs-12 {
+    width: 100%;
+}
+
+.app-col-xs-11 {
+    width: 91.66666667%;
+}
+
+.app-col-xs-10 {
+    width: 83.33333333%;
+}
+
+.app-col-xs-9 {
+    width: 75%;
+}
+
+.app-col-xs-8 {
+    width: 66.66666667%;
+}
+
+.app-col-xs-7 {
+    width: 58.33333333%;
+}
+
+.app-col-xs-6 {
+    width: 50%;
+}
+
+.app-col-xs-5 {
+    width: 41.66666667%;
+}
+
+.app-col-xs-4 {
+    width: 33.33333333%;
+}
+
+.app-col-xs-3 {
+    width: 25%;
+}
+
+.app-col-xs-2 {
+    width: 16.66666667%;
+}
+
+.app-col-xs-1 {
+    width: 8.33333333%;
+}
+
+@media (min-width: 400px) {
+    .app-col-sm-12 {
+        width: 100%;
+    }
+    .app-col-sm-11 {
+        width: 91.66666667%;
+    }
+    .app-col-sm-10 {
+        width: 83.33333333%;
+    }
+    .app-col-sm-9 {
+        width: 75%;
+    }
+    .app-col-sm-8 {
+        width: 66.66666667%;
+    }
+    .app-col-sm-7 {
+        width: 58.33333333%;
+    }
+    .app-col-sm-6 {
+        width: 50%;
+    }
+    .app-col-sm-5 {
+        width: 41.66666667%;
+    }
+    .app-col-sm-4 {
+        width: 33.33333333%;
+    }
+    .app-col-sm-3 {
+        width: 25%;
+    }
+    .app-col-sm-2 {
+        width: 16.66666667%;
+    }
+    .app-col-sm-1 {
+        width: 8.33333333%;
+    }
+}
+
+
+/*app-table*/
+
+.app-table {
+    display: table;
+    width: 100%;
+    >* {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    &.app-table-top {
+        >* {
+            vertical-align: top;
+        }
+    }
+    &.app-table-bottom {
+        >* {
+            vertical-align: bottom;
+        }
+    }
+    .app-table-full {
+        width: 100%;
+        > * {
+            display: block;
+            width: 100%;
+        }
+    }
+    .app-table-pre {
+        white-space: pre;
+    }
+}

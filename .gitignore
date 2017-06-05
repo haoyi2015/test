@@ -1,0 +1,18 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+test/unit/coverage
+test/e2e/reports
+selenium-debug.log
+src/assets/icomoon/Read Me.txt
+src/assets/icomoon/demo-files/demo.css
+src/assets/icomoon/demo-files/demo.js
+src/assets/icomoon/demo.html
+src/assets/icomoon/fonts/icomoon.eot
+src/assets/icomoon/fonts/icomoon.svg
+src/assets/icomoon/fonts/icomoon.ttf
+src/assets/icomoon/fonts/icomoon.woff
+src/assets/icomoon/selection.json
+src/assets/icomoon/style.css
